@@ -1,191 +1,209 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thực đơn cà phê Nguyên Chất – Espresso, Cold Brew, Cappuccino, Cà Phê Sữa Đá và nhiều hơn nữa.">
+  <meta name="description"
+    content="Thực đơn cà phê Nguyên Chất – Espresso, Cold Brew, Cappuccino, Cà Phê Sữa Đá và nhiều hơn nữa.">
   <title>Sản Phẩm – Nguyên Chất Coffee</title>
   <link id="theme-stylesheet" rel="stylesheet" href="assets/css/style1-dark-luxury.css">
   <link rel="stylesheet" href="assets/css/switcher.css">
 </head>
+
 <body>
 
-<!-- STYLE SWITCHER -->
-<div id="style-switcher">
-  <button class="style-toggle-btn" onclick="toggleStyleSwitcher()">🎨 STYLE REVIEW</button>
-  <div class="style-panel">
-    <div class="style-panel-header">
-      <div><h3>CHỌN STYLE</h3><p class="style-panel-sub">5 Phong Cách Review</p></div>
-      <button class="close-btn" onclick="toggleStyleSwitcher()">✕</button>
-    </div>
-    <div class="style-panel-body"><div class="style-btns"></div></div>
-    <div class="style-panel-footer">
-      <div class="current-style-badge"><span>Đang xem:</span><span class="current-style-name">Dark Luxury</span></div>
-      <p>Style áp dụng cho toàn bộ trang web</p>
-    </div>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo">
-    <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo Nguyên Chất Coffee">
-    <span class="nav-logo-text">Nguyên Chất</span>
-  </a>
-  <ul class="nav-menu">
-    <li><a href="index.html">Trang Chủ</a></li>
-    <li><a href="products.html" class="active">Sản Phẩm</a></li>
-    <li><a href="about.html">Giới Thiệu</a></li>
-    <li><a href="news.html">Tin Tức</a></li>
-    <li><a href="contact.html" class="nav-cta">Liên Hệ</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="page-hero-content">
-    <h1>Thực Đơn Cà Phê</h1>
-    <p>Khám phá hơn 50 loại cà phê đặc sắc từ cao nguyên Việt Nam</p>
-  </div>
-</div>
-
-<!-- PRODUCTS PAGE -->
-<section id="products-page">
-  <div class="section-header">
-    <div class="section-tag">Bộ Sưu Tập</div>
-    <h2 class="section-title">Chọn <span>Ly Cà Phê</span> Hoàn Hảo</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">Từ espresso đậm đà đến cold brew mát lạnh, mỗi ly đều được chế biến với sự tỉ mỉ và tình yêu.</p>
-  </div>
-
-  <!-- Filters -->
-  <div style="display: flex; justify-content: center;">
-    <div class="products-filter products-filter-wrap" id="products-filter">
-      <button class="filter-btn active" data-filter="all" id="filter-all">Tất Cả</button>
-      <button class="filter-btn" data-filter="hot" id="filter-hot">☕ Cà Phê Nóng</button>
-      <button class="filter-btn" data-filter="iced" id="filter-iced">🧊 Cà Phê Đá</button>
-    </div>
-  </div>
-
-  <div class="products-grid" id="products-grid"></div>
-</section>
-
-<!-- EXTRA CATEGORIES -->
-<section style="background: var(--bg-section, var(--bg-off, #f8f8f8));">
-  <div class="section-header">
-    <div class="section-tag">Đặc Biệt</div>
-    <h2 class="section-title">Cà Phê <span>Theo Mùa</span></h2>
-    <div class="divider"></div>
-  </div>
-  <div class="products-grid">
-    <div class="product-card animate-fade-up" data-cat="seasonal">
-      <div class="product-img-wrap">
-        <img src="assets/images/product_cold_brew_1775547125882.png" alt="Cold Brew Dừa" loading="lazy">
-        <span class="product-badge">Mùa Hè</span>
+  <!-- STYLE SWITCHER -->
+  <div id="style-switcher">
+    <button class="style-toggle-btn" onclick="toggleStyleSwitcher()">🎨</button>
+    <div class="style-panel">
+      <div class="style-panel-header">
+        <div>
+          <h3>CHỌN STYLE</h3>
+          <p class="style-panel-sub">5 Phong Cách Review</p>
+        </div>
+        <button class="close-btn" onclick="toggleStyleSwitcher()">✕</button>
       </div>
-      <div class="product-body">
-        <p class="product-category">🌴 Đặc Biệt Mùa Hè</p>
-        <h3 class="product-name">Cold Brew Dừa Tươi</h3>
-        <p class="product-desc">Cold brew ủ 24h hoà cùng nước cốt dừa tươi, giải nhiệt hoàn hảo cho những ngày hè oi bức.</p>
-        <div class="product-footer">
-          <span class="product-price">60.000đ</span>
-          <button class="product-btn" onclick="addToCart('Cold Brew Dừa Tươi')">Đặt Ngay</button>
+      <div class="style-panel-body">
+        <div class="style-btns"></div>
+      </div>
+      <div class="style-panel-footer">
+        <div class="current-style-badge"><span>Đang xem:</span><span class="current-style-name">Dark Luxury</span></div>
+        <p>Style áp dụng cho toàn bộ trang web</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo Nguyên Chất Coffee">
+      <span class="nav-logo-text">Nguyên Chất</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="products.html" class="active">Sản Phẩm</a></li>
+      <li><a href="about.html">Giới Thiệu</a></li>
+      <li><a href="news.html">Tin Tức</a></li>
+      <li><a href="contact.html" class="nav-cta">Liên Hệ</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Thực Đơn Cà Phê</h1>
+      <p>Khám phá hơn 50 loại cà phê đặc sắc từ cao nguyên Việt Nam</p>
+    </div>
+  </div>
+
+  <!-- PRODUCTS PAGE -->
+  <section id="products-page">
+    <div class="section-header">
+      <div class="section-tag">Bộ Sưu Tập</div>
+      <h2 class="section-title">Chọn <span>Ly Cà Phê</span> Hoàn Hảo</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Từ espresso đậm đà đến cold brew mát lạnh, mỗi ly đều được chế biến với sự tỉ mỉ và
+        tình yêu.</p>
+    </div>
+
+    <!-- Filters -->
+    <div style="display: flex; justify-content: center;">
+      <div class="products-filter products-filter-wrap" id="products-filter">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Tất Cả</button>
+        <button class="filter-btn" data-filter="hot" id="filter-hot">☕ Cà Phê Nóng</button>
+        <button class="filter-btn" data-filter="iced" id="filter-iced">🧊 Cà Phê Đá</button>
+      </div>
+    </div>
+
+    <div class="products-grid" id="products-grid"></div>
+  </section>
+
+  <!-- EXTRA CATEGORIES -->
+  <section style="background: var(--bg-section, var(--bg-off, #f8f8f8));">
+    <div class="section-header">
+      <div class="section-tag">Đặc Biệt</div>
+      <h2 class="section-title">Cà Phê <span>Theo Mùa</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="products-grid">
+      <div class="product-card animate-fade-up" data-cat="seasonal">
+        <div class="product-img-wrap">
+          <img src="assets/images/product_cold_brew_1775547125882.png" alt="Cold Brew Dừa" loading="lazy">
+          <span class="product-badge">Mùa Hè</span>
+        </div>
+        <div class="product-body">
+          <p class="product-category">🌴 Đặc Biệt Mùa Hè</p>
+          <h3 class="product-name">Cold Brew Dừa Tươi</h3>
+          <p class="product-desc">Cold brew ủ 24h hoà cùng nước cốt dừa tươi, giải nhiệt hoàn hảo cho những ngày hè oi
+            bức.</p>
+          <div class="product-footer">
+            <span class="product-price">60.000đ</span>
+            <button class="product-btn" onclick="addToCart('Cold Brew Dừa Tươi')">Đặt Ngay</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card animate-fade-up delay-1" data-cat="seasonal">
+        <div class="product-img-wrap">
+          <img src="assets/images/product_espresso_1775547105569.png" alt="Espresso Mật Ong" loading="lazy">
+          <span class="product-badge">Giới Hạn</span>
+        </div>
+        <div class="product-body">
+          <p class="product-category">🍯 Đặc Biệt Mùa Thu</p>
+          <h3 class="product-name">Espresso Mật Ong Rừng</h3>
+          <p class="product-desc">Espresso đậm đà kết hợp mật ong rừng nguyên chất từ cao nguyên, tạo nên vị ngọt tự
+            nhiên độc đáo.</p>
+          <div class="product-footer">
+            <span class="product-price">55.000đ</span>
+            <button class="product-btn" onclick="addToCart('Espresso Mật Ong Rừng')">Đặt Ngay</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card animate-fade-up delay-2" data-cat="seasonal">
+        <div class="product-img-wrap">
+          <img src="assets/images/product_caphe_sua_1775547141213.png" alt="Cà Phê Muối" loading="lazy">
+        </div>
+        <div class="product-body">
+          <p class="product-category">🧂 Xu Hướng 2026</p>
+          <h3 class="product-name">Cà Phê Muối Hội An</h3>
+          <p class="product-desc">Công thức đặc biệt từ Hội An: cà phê hòa cùng kem muối biển, vị mặn ngọt lạ miệng khó
+            quên.</p>
+          <div class="product-footer">
+            <span class="product-price">45.000đ</span>
+            <button class="product-btn" onclick="addToCart('Cà Phê Muối Hội An')">Đặt Ngay</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="product-card animate-fade-up delay-1" data-cat="seasonal">
-      <div class="product-img-wrap">
-        <img src="assets/images/product_espresso_1775547105569.png" alt="Espresso Mật Ong" loading="lazy">
-        <span class="product-badge">Giới Hạn</span>
-      </div>
-      <div class="product-body">
-        <p class="product-category">🍯 Đặc Biệt Mùa Thu</p>
-        <h3 class="product-name">Espresso Mật Ong Rừng</h3>
-        <p class="product-desc">Espresso đậm đà kết hợp mật ong rừng nguyên chất từ cao nguyên, tạo nên vị ngọt tự nhiên độc đáo.</p>
-        <div class="product-footer">
-          <span class="product-price">55.000đ</span>
-          <button class="product-btn" onclick="addToCart('Espresso Mật Ong Rừng')">Đặt Ngay</button>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align:center; padding: 80px 5%; background: var(--bg-card, white);">
+    <div class="section-tag">Đặt Hàng</div>
+    <h2 class="section-title" style="margin: 15px 0 20px;">Muốn Thưởng Thức <span>Tại Nhà</span>?</h2>
+    <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 35px;">Đặt mua cà phê rang xay hoặc hạt cà
+      phê nguyên chất trực tiếp từ chúng tôi, giao hàng toàn quốc.</p>
+    <a href="contact.html" class="btn-primary" id="order-contact-btn">📦 Đặt Mua Ngay</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo">
+          <span class="footer-logo-text">Nguyên Chất Coffee</span>
+        </a>
+        <p>Mang đến hương vị cà phê nguyên chất từ vùng cao nguyên Việt Nam.</p>
+        <div class="socials">
+          <a href="#" class="social-link">f</a><a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">▶</a><a href="#" class="social-link">Z</a>
         </div>
       </div>
-    </div>
-    <div class="product-card animate-fade-up delay-2" data-cat="seasonal">
-      <div class="product-img-wrap">
-        <img src="assets/images/product_caphe_sua_1775547141213.png" alt="Cà Phê Muối" loading="lazy">
+      <div class="footer-col">
+        <h4>Điều Hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="products.html">Sản Phẩm</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="news.html">Tin Tức</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
       </div>
-      <div class="product-body">
-        <p class="product-category">🧂 Xu Hướng 2026</p>
-        <h3 class="product-name">Cà Phê Muối Hội An</h3>
-        <p class="product-desc">Công thức đặc biệt từ Hội An: cà phê hòa cùng kem muối biển, vị mặn ngọt lạ miệng khó quên.</p>
-        <div class="product-footer">
-          <span class="product-price">45.000đ</span>
-          <button class="product-btn" onclick="addToCart('Cà Phê Muối Hội An')">Đặt Ngay</button>
-        </div>
+      <div class="footer-col">
+        <h4>Danh Mục</h4>
+        <ul>
+          <li><a href="#">Cà Phê Nóng</a></li>
+          <li><a href="#">Cà Phê Đá</a></li>
+          <li><a href="#">Cold Brew</a></li>
+          <li><a href="#">Đặc Biệt Mùa</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section style="text-align:center; padding: 80px 5%; background: var(--bg-card, white);">
-  <div class="section-tag">Đặt Hàng</div>
-  <h2 class="section-title" style="margin: 15px 0 20px;">Muốn Thưởng Thức <span>Tại Nhà</span>?</h2>
-  <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 35px;">Đặt mua cà phê rang xay hoặc hạt cà phê nguyên chất trực tiếp từ chúng tôi, giao hàng toàn quốc.</p>
-  <a href="contact.html" class="btn-primary" id="order-contact-btn">📦 Đặt Mua Ngay</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo">
-        <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo">
-        <span class="footer-logo-text">Nguyên Chất Coffee</span>
-      </a>
-      <p>Mang đến hương vị cà phê nguyên chất từ vùng cao nguyên Việt Nam.</p>
-      <div class="socials">
-        <a href="#" class="social-link">f</a><a href="#" class="social-link">📷</a>
-        <a href="#" class="social-link">▶</a><a href="#" class="social-link">Z</a>
+      <div class="footer-col">
+        <h4>Liên Hệ</h4>
+        <ul>
+          <li><a href="tel:0901234567">📞 0901 234 567</a></li>
+          <li><a href="mailto:hello@nguyenchat.vn">✉ hello@nguyenchat.vn</a></li>
+          <li><a href="#">📍 123 Nguyễn Huệ, Q.1</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Điều Hướng</h4>
-      <ul>
-        <li><a href="index.html">Trang Chủ</a></li><li><a href="products.html">Sản Phẩm</a></li>
-        <li><a href="about.html">Giới Thiệu</a></li><li><a href="news.html">Tin Tức</a></li>
-        <li><a href="contact.html">Liên Hệ</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>© 2026 Nguyên Chất Coffee. Bảo lưu mọi quyền.</p>
+      <p>Thiết kế với ❤️ tại Việt Nam</p>
     </div>
-    <div class="footer-col">
-      <h4>Danh Mục</h4>
-      <ul>
-        <li><a href="#">Cà Phê Nóng</a></li><li><a href="#">Cà Phê Đá</a></li>
-        <li><a href="#">Cold Brew</a></li><li><a href="#">Đặc Biệt Mùa</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Liên Hệ</h4>
-      <ul>
-        <li><a href="tel:0901234567">📞 0901 234 567</a></li>
-        <li><a href="mailto:hello@nguyenchat.vn">✉ hello@nguyenchat.vn</a></li>
-        <li><a href="#">📍 123 Nguyễn Huệ, Q.1</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Nguyên Chất Coffee. Bảo lưu mọi quyền.</p>
-    <p>Thiết kế với ❤️ tại Việt Nam</p>
-  </div>
-</footer>
+  </footer>
 
-<script src="assets/js/data.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-  (function() {
-    const id = parseInt(localStorage.getItem('cafeStyle') || '1');
-    document.getElementById('theme-stylesheet').href = 'assets/css/style' + id + '-' + 
-      ['','dark-luxury','fresh-garden','pure-minimal','vibrant-modern','ocean-depth'][id] + '.css';
-  })();
-</script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const id = parseInt(localStorage.getItem('cafeStyle') || '1');
+      document.getElementById('theme-stylesheet').href = 'assets/css/style' + id + '-' +
+        ['', 'dark-luxury', 'fresh-garden', 'pure-minimal', 'vibrant-modern', 'ocean-depth'][id] + '.css';
+    })();
+  </script>
 </body>
+
 </html>
