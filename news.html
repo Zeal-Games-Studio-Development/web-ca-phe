@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tin tức và bài viết về cà phê – Mẹo pha chế, xu hướng mới, câu chuyện từ Nguyên Chất Coffee.">
+  <title>Tin Tức – Nguyên Chất Coffee</title>
+  <link id="theme-stylesheet" rel="stylesheet" href="assets/css/style1-dark-luxury.css">
+  <link rel="stylesheet" href="assets/css/switcher.css">
+</head>
+<body>
+
+<!-- STYLE SWITCHER -->
+<div id="style-switcher">
+  <button class="style-toggle-btn" onclick="toggleStyleSwitcher()">🎨</button>
+  <div class="style-panel">
+    <div class="style-panel-header">
+      <div><h3>CHỌN STYLE</h3><p class="style-panel-sub">5 Phong Cách Review</p></div>
+      <button class="close-btn" onclick="toggleStyleSwitcher()">✕</button>
+    </div>
+    <div class="style-panel-body"><div class="style-btns"></div></div>
+    <div class="style-panel-footer">
+      <div class="current-style-badge"><span>Đang xem:</span><span class="current-style-name">Dark Luxury</span></div>
+      <p>Style áp dụng cho toàn bộ trang web</p>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo">
+    <span class="nav-logo-text">Nguyên Chất</span>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Trang Chủ</a></li>
+    <li><a href="products.html">Sản Phẩm</a></li>
+    <li><a href="about.html">Giới Thiệu</a></li>
+    <li><a href="news.html" class="active">Tin Tức</a></li>
+    <li><a href="contact.html" class="nav-cta">Liên Hệ</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <h1>Tin Tức & Chia Sẻ</h1>
+    <p>Câu chuyện cà phê, mẹo hay và xu hướng mới nhất từ Nguyên Chất</p>
+  </div>
+</div>
+
+<!-- NEWS FEATURED -->
+<section>
+  <div class="section-header">
+    <div class="section-tag">Nổi Bật</div>
+    <h2 class="section-title">Bài Viết <span>Được Yêu Thích</span></h2>
+    <div class="divider"></div>
+  </div>
+  
+  <!-- Featured article big card -->
+  <div class="animate-fade-up" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-bottom: 60px; align-items: center; background: var(--bg-card, white); border: 1px solid var(--border, #eee); border-radius: 16px; overflow: hidden;">
+    <div style="height: 420px; overflow: hidden;">
+      <img src="assets/images/news_banner_1775547254502.png" alt="Bí quyết pha cà phê" style="width:100%;height:100%;object-fit:cover;display:block; transition: transform 0.4s;">
+    </div>
+    <div style="padding: 40px;">
+      <div style="display: flex; gap: 12px; margin-bottom: 15px; align-items: center;">
+        <span class="news-cat" style="background: var(--primary, #333); color: white; padding: 4px 12px; font-size: 0.75rem; font-weight: 700; border-radius: 4px;">Mẹo Hay</span>
+        <span style="color: var(--text-muted); font-size: 0.82rem;">📅 01/04/2026</span>
+      </div>
+      <h2 style="font-family: var(--font-serif, serif); font-size: 1.8rem; line-height: 1.3; margin-bottom: 15px; color: var(--text-primary);">Bí Quyết Pha Cà Phê Ngon Tại Nhà Theo Chuẩn Barista</h2>
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 25px;">Bạn muốn có được một ly cà phê ngon như tiệm ngay tại nhà? Không cần máy pha café đắt tiền, chỉ cần nắm được vài bí quyết đơn giản này là bạn đã có thể pha ra những ly espresso, cappuccino hay cold brew hoàn hảo...</p>
+      <a href="#" class="btn-primary" style="display: inline-flex;">Đọc Bài Viết →</a>
+    </div>
+  </div>
+
+  <!-- NEWS GRID -->
+  <div class="news-grid" id="news-grid"></div>
+</section>
+
+<!-- MORE NEWS -->
+<section style="background: var(--bg-section, var(--bg-off, #f8f7f5));">
+  <div class="section-header">
+    <div class="section-tag">Chuyên Mục</div>
+    <h2 class="section-title">Khám Phá <span>Thêm</span> Chủ Đề</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="news-grid">
+    <article class="news-card animate-fade-up" id="news-4">
+      <div class="news-img"><img src="assets/images/company_interior_1775547197418.png" alt="Không gian cà phê" loading="lazy"></div>
+      <div class="news-body">
+        <div class="news-meta"><span class="news-cat">Không Gian</span><span class="news-date">📅 10/03/2026</span></div>
+        <h3 class="news-title">Thiết Kế Quán Cà Phê: Từ Ý Tưởng Đến Thực Tế</h3>
+        <p class="news-excerpt">Chúng tôi đã mất 6 tháng để hoàn thiện không gian chi nhánh mới nhất ở Quận 7 – và đây là những bài học quý giá từ hành trình đó.</p>
+        <a href="#" class="news-link">Đọc Thêm →</a>
+      </div>
+    </article>
+    <article class="news-card animate-fade-up delay-1" id="news-5">
+      <div class="news-img"><img src="assets/images/process_harvesting_1775547179908.png" alt="Nông trại cà phê" loading="lazy"></div>
+      <div class="news-body">
+        <div class="news-meta"><span class="news-cat">Nông Trại</span><span class="news-date">📅 05/03/2026</span></div>
+        <h3 class="news-title">Một Ngày Trên Đồi Cà Phê Đà Lạt Cùng Người Nông Dân</h3>
+        <p class="news-excerpt">Theo chân anh Bình – người nông dân trồng cà phê 20 năm ở Đà Lạt để hiểu hơn về sự vất vả và niềm vui trong từng vụ thu hoạch.</p>
+        <a href="#" class="news-link">Đọc Thêm →</a>
+      </div>
+    </article>
+    <article class="news-card animate-fade-up delay-2" id="news-6">
+      <div class="news-img"><img src="assets/images/product_espresso_1775547105569.png" alt="Espresso" loading="lazy"></div>
+      <div class="news-body">
+        <div class="news-meta"><span class="news-cat">Kiến Thức</span><span class="news-date">📅 28/02/2026</span></div>
+        <h3 class="news-title">Arabica vs Robusta: Sự Khác Biệt Bạn Cần Biết</h3>
+        <p class="news-excerpt">Tìm hiểu sự khác biệt hoàn toàn về hương vị, địa lý và cách pha chế giữa hai giống cà phê phổ biến nhất thế giới.</p>
+        <a href="#" class="news-link">Đọc Thêm →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NEWSLETTER SIGNUP -->
+<section style="text-align:center; padding: 80px 5%;">
+  <div class="section-tag">Đăng Ký</div>
+  <h2 class="section-title" style="margin: 15px 0 15px;">Nhận Bài Viết <span>Mới Nhất</span> Mỗi Tuần</h2>
+  <p style="color: var(--text-secondary); max-width: 450px; margin: 0 auto 35px;">Đăng ký nhận bản tin để không bỏ lỡ những mẹo pha cà phê và câu chuyện thú vị từ Nguyên Chất.</p>
+  <form id="newsletter-form" style="display: flex; gap: 12px; max-width: 450px; margin: 0 auto;" onsubmit="subscribeNewsletter(event)">
+    <input type="email" placeholder="Email của bạn..." required
+      style="flex: 1; padding: 14px 18px; border: 1px solid var(--border, #ddd); background: var(--bg-card, white); color: var(--text-primary); font-size: 0.95rem; outline: none; border-radius: 4px; font-family: inherit;">
+    <button type="submit" class="btn-primary" style="white-space: nowrap;" id="newsletter-submit-btn">Đăng Ký</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo">
+        <span class="footer-logo-text">Nguyên Chất Coffee</span>
+      </a>
+      <p>Mang đến hương vị cà phê nguyên chất từ vùng cao nguyên Việt Nam.</p>
+      <div class="socials">
+        <a href="#" class="social-link">f</a><a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">▶</a><a href="#" class="social-link">Z</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Điều Hướng</h4><ul>
+      <li><a href="index.html">Trang Chủ</a></li><li><a href="products.html">Sản Phẩm</a></li>
+      <li><a href="about.html">Giới Thiệu</a></li><li><a href="news.html">Tin Tức</a></li>
+      <li><a href="contact.html">Liên Hệ</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Chuyên Mục</h4><ul>
+      <li><a href="#">Mẹo Pha Cà Phê</a></li><li><a href="#">Câu Chuyện Nông Trại</a></li>
+      <li><a href="#">Xu Hướng Mới</a></li><li><a href="#">Kiến Thức Cà Phê</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Liên Hệ</h4><ul>
+      <li><a href="tel:0901234567">📞 0901 234 567</a></li>
+      <li><a href="mailto:hello@nguyenchat.vn">✉ hello@nguyenchat.vn</a></li>
+      <li><a href="#">📍 123 Nguyễn Huệ, Q.1</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nguyên Chất Coffee. Bảo lưu mọi quyền.</p>
+    <p>Thiết kế với ❤️ tại Việt Nam</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  function subscribeNewsletter(e) {
+    e.preventDefault();
+    const btn = document.getElementById('newsletter-submit-btn');
+    btn.textContent = '✓ Đã đăng ký!';
+    setTimeout(() => { btn.textContent = 'Đăng Ký'; e.target.reset(); }, 3000);
+  }
+  (function() {
+    const id = parseInt(localStorage.getItem('cafeStyle') || '1');
+    document.getElementById('theme-stylesheet').href = 'assets/css/style' + id + '-' + 
+      ['','dark-luxury','fresh-garden','pure-minimal','vibrant-modern','ocean-depth'][id] + '.css';
+  })();
+</script>
+</body>
+</html>

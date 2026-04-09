@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Nguyên Chất Coffee - Cà phê nguyên chất từ cao nguyên Việt Nam. Hương vị đậm đà, chất lượng hàng đầu.">
+  <title>Nguyên Chất Coffee – Hương Vị Từ Đất Trời</title>
+  <link id="theme-stylesheet" rel="stylesheet" href="assets/css/style1-dark-luxury.css">
+  <link rel="stylesheet" href="assets/css/switcher.css">
+</head>
+
+<body>
+
+  <!-- STYLE SWITCHER -->
+  <div id="style-switcher">
+    <button class="style-toggle-btn" onclick="toggleStyleSwitcher()" aria-label="">🎨</button>
+    <div class="style-panel">
+      <div class="style-panel-header">
+        <h3>CHỌN STYLE</h3>
+        <button class="close-btn" onclick="toggleStyleSwitcher()">✕</button>
+      </div>
+      <div class="style-panel-body">
+        <div class="style-btns"></div>
+      </div>
+      <div class="style-panel-footer">
+        <div class="current-style-badge">
+          <span>Đang xem:</span><span class="current-style-name">Dark Luxury</span>
+        </div>
+        <p>Style áp dụng cho toàn bộ trang web</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo_coffee_1775547269134.png" alt="Nguyên Chất Coffee Logo">
+      <span class="nav-logo-text">Nguyên Chất</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Trang Chủ</a></li>
+      <li><a href="products.html">Sản Phẩm</a></li>
+      <li><a href="about.html">Giới Thiệu</a></li>
+      <li><a href="news.html">Tin Tức</a></li>
+      <li><a href="contact.html" class="nav-cta">Liên Hệ</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <!-- Style 2: need image col -->
+    <div class="hero-content-wrap" style="display:contents;">
+      <div class="hero-content animate-fade-up">
+        <div class="hero-tag">☕ Từ Nông Trại Đến Tách Cà Phê</div>
+        <h1 class="hero-title">
+          Cà Phê Nguyên Chất
+          <span class="accent">Đậm Đà – Tinh Tế</span>
+        </h1>
+        <p class="hero-desc">Tận hưởng những tách cà phê được tuyển chọn từ vùng cao nguyên Đà Lạt và Buôn Ma Thuột,
+          rang thủ công theo quy trình khép kín, giữ nguyên hương vị tự nhiên tinh tế nhất.</p>
+        <div class="hero-btns">
+          <a href="products.html" class="btn-primary" id="hero-view-menu-btn">🍵 Xem Thực Đơn</a>
+          <a href="about.html" class="btn-outline" id="hero-about-btn">Câu Chuyện Của Chúng Tôi</a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-2">
+          <div class="stat-item">
+            <div class="number">10+</div>
+            <div class="label">Năm Kinh Nghiệm</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">50+</div>
+            <div class="label">Loại Cà Phê</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">10K+</div>
+            <div class="label">Khách Hàng Tin Yêu</div>
+          </div>
+        </div>
+      </div>
+      <!-- For Style 2: side image (hidden by other styles via CSS) -->
+      <div class="hero-img-side">
+        <img src="assets/images/banner_hero_1775547083656.png" alt="Premium Coffee" class="hero-bg-img">
+        <div class="hero-img-float">
+          <div class="rating">★★★★★</div>
+          <p class="count">10,000+</p>
+          <p>Khách hàng hài lòng</p>
+        </div>
+      </div>
+      <!-- For Style 3: fullwidth image col -->
+      <div class="hero-img-col">
+        <img src="assets/images/banner_hero_1775547083656.png" alt="Premium Coffee Banner" class="hero-bg-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="featured-products" style="background: var(--bg-section, var(--bg-off, var(--bg-warm, #f8f7f5)));">
+    <div class="section-header">
+      <div class="section-tag">Thực Đơn Nổi Bật</div>
+      <h2 class="section-title">Những <span>Ly Cà Phê</span> Được Yêu Thích</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Khám phá bộ sưu tập cà phê đặc biệt được chọn lọc từ những vùng nguyên liệu tốt nhất
+        Việt Nam.</p>
+    </div>
+    <div class="products-filter" id="featured-filter">
+      <button class="filter-btn active" data-filter="all" id="filter-all">Tất Cả</button>
+      <button class="filter-btn" data-filter="hot" id="filter-hot">☕ Cà Phê Nóng</button>
+      <button class="filter-btn" data-filter="iced" id="filter-iced">🧊 Cà Phê Đá</button>
+      <button class="filter-btn" data-filter="bag" id="filter-bag">📦 Túi Cà Phê</button>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="products.html" class="btn-primary" id="view-all-products-btn">Xem Tất Cả Sản Phẩm →</a>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section id="about-preview">
+    <div class="about-grid">
+      <div class="about-img-wrap animate-fade-up">
+        <img src="assets/images/company_interior_1775547197418.png" alt="Không gian quán cà phê Nguyên Chất"
+          class="about-img-main">
+        <div class="about-img-badge">
+          <div class="year">10</div>
+          <div class="yr-label">Năm Thành Lập</div>
+        </div>
+      </div>
+      <div class="about-content animate-fade-up delay-1">
+        <div class="section-tag">Về Chúng Tôi</div>
+        <h2 class="section-title">Hành Trình <span>10 Năm</span> Chắt Lọc Hương Vị</h2>
+        <div class="divider" style="margin: 20px 0;"></div>
+        <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1rem; line-height: 1.8;">Từ năm 2015,
+          Nguyên Chất Coffee bắt đầu hành trình với niềm đam mê thuần túy: mang đến những tách cà phê thật sự ngon từ
+          những hạt cà phê được tuyển chọn kỹ lưỡng từ vùng nguyên liệu tốt nhất Tây Nguyên Việt Nam.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1rem; line-height: 1.8;">Mỗi tách cà phê
+          là kết tinh của sự tỉ mỉ trong từng công đoạn — từ thu hoạch, sơ chế, rang đến pha chế. Chúng tôi tin rằng cà
+          phê ngon là cà phê được làm với tình yêu và trách nhiệm.</p>
+        <div class="about-values">
+          <div class="value-card">
+            <div class="value-icon">🌿</div>
+            <h4>Nguyên Liệu Sạch</h4>
+            <p>100% cà phê tự nhiên từ nông trại đạt chuẩn</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🔥</div>
+            <h4>Rang Thủ Công</h4>
+            <p>Quy trình rang kiểm soát tỉ mỉ từng mẻ</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🏆</div>
+            <h4>Chất Lượng Đỉnh</h4>
+            <p>Đạt chứng nhận chất lượng quốc tế SCA</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">💚</div>
+            <h4>Bền Vững</h4>
+            <p>Cam kết canh tác và kinh doanh có trách nhiệm</p>
+          </div>
+        </div>
+        <div style="margin-top: 35px;">
+          <a href="about.html" class="btn-primary" id="about-more-btn">Khám Phá Câu Chuyện Chúng Tôi →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section id="process" style="background: var(--bg-section, var(--bg-off, #f8f7f5)); overflow: hidden;">
+    <div class="section-header">
+      <div class="section-tag">Quy Trình Sản Xuất</div>
+      <h2 class="section-title">Từ <span>Nông Trại</span> Đến <span>Nhà Máy</span> – Hành Trình Trọn Vẹn</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Mỗi túch cà phê trải qua 6 giai đoạn kiểm soát chất lượng nghiêm ngặt, từ ngoài trời
+        đến nhà máy hiện đại, đảm bảo hương vị tốt nhất.</p>
+    </div>
+
+    <!-- Process Journey Label Strip -->
+    <div class="process-journey-strip">
+      <div class="journey-point">
+        <span class="journey-dot outdoor"></span>
+        <span>🌿 Ngoài Trời &amp; Nông Trại</span>
+      </div>
+      <div class="journey-arrow">→→→</div>
+      <div class="journey-point">
+        <span class="journey-dot transition"></span>
+        <span>🏠 Cơ Sở Sơ Chế</span>
+      </div>
+      <div class="journey-arrow">→→→</div>
+      <div class="journey-point">
+        <span class="journey-dot indoor"></span>
+        <span>🏭 Nhà Máy Hiện Đại</span>
+      </div>
+    </div>
+
+    <!-- Timeline Process Grid -->
+    <div class="process-timeline-grid" id="process-grid"></div>
+
+    <!-- Factory Showcase Strip -->
+    <div class="factory-showcase">
+      <div class="factory-showcase-header">
+        <div class="section-tag" style="display:inline-block;">Nhà Máy</div>
+        <h3>Cơ Sở Sản Xuất Hiện Đại</h3>
+        <p>Trang bị dây chuyền đồng bộ, tiêu chuẩn HACCP – đảm bảo an toàn thực phẩm tuyệt đối.</p>
+      </div>
+      <div class="factory-img-strip">
+        <div class="factory-img-item animate-fade-up">
+          <img src="assets/images/process_factory_roasting_1775548564046.png" alt="Phân xưởng rang cà phê">
+          <div class="factory-img-caption">🔥 Phân Xưởng Rang</div>
+        </div>
+        <div class="factory-img-item animate-fade-up delay-1">
+          <img src="assets/images/process_factory_packaging_1775548582253.png" alt="Dây chuyền đóng gói">
+          <div class="factory-img-caption">📦 Dây Chuyền Đóng Gói</div>
+        </div>
+        <div class="factory-img-item animate-fade-up delay-2">
+          <img src="assets/images/process_sorting_washing_1775548530077.png" alt="Nhà máy phân loại">
+          <div class="factory-img-caption">💧 Phân Loại &amp; Rửa Sạch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <div class="section-header">
+      <div class="section-tag">Không Gian</div>
+      <h2 class="section-title">Góc Nhìn <span>Nguyên Chất</span></h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Không gian ấm cúng, tinh tế – nơi mỗi khoảnh khắc đều trở nên đáng nhớ.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item animate-fade-up">
+        <img src="assets/images/company_interior_1775547197418.png" alt="Không gian quán">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item animate-fade-up delay-1">
+        <img src="assets/images/company_team_1775547215316.png" alt="Đội ngũ barista">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item animate-fade-up delay-2">
+        <img src="assets/images/process_roasting_1775547164124.png" alt="Rang cà phê">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item animate-fade-up delay-1">
+        <img src="assets/images/product_espresso_1775547105569.png" alt="Espresso">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background: var(--bg-section, var(--bg-off, #f8f7f5));">
+    <div class="section-header">
+      <div class="section-tag">Đánh Giá</div>
+      <h2 class="section-title">Khách Hàng <span>Nói Gì</span> Về Chúng Tôi</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Hàng nghìn khách hàng đã tin tưởng và yêu thích các sản phẩm của Nguyên Chất Coffee.
+      </p>
+    </div>
+    <div class="testimonials-slider" id="testimonials-grid"></div>
+  </section>
+
+  <!-- LATEST NEWS PREVIEW -->
+  <section id="news-preview">
+    <div class="section-header">
+      <div class="section-tag">Tin Tức</div>
+      <h2 class="section-title">Câu Chuyện & <span>Chia Sẻ</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="news-grid" id="news-grid"></div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="news.html" class="btn-outline" id="view-all-news-btn">Xem Tất Cả Bài Viết →</a>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section id="cta" style="text-align:center; background: var(--bg-card, white); padding: 80px 5%;">
+    <div class="section-tag">Bắt Đầu Hành Trình</div>
+    <h2 class="section-title" style="margin: 15px 0 20px;">Sẵn Sàng Thử <span>Hương Vị Tuyệt Vời</span>?</h2>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 40px; font-size: 1rem;">Liên hệ với chúng
+      tôi để đặt hàng hoặc tìm hiểu thêm về các sản phẩm cà phê đặc biệt.</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <a href="contact.html" class="btn-primary" id="cta-contact-btn">📞 Liên Hệ Ngay</a>
+      <a href="products.html" class="btn-outline" id="cta-products-btn">🛒 Đặt Mua Online</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/logo_coffee_1775547269134.png" alt="Logo">
+          <span class="footer-logo-text">Nguyên Chất Coffee</span>
+        </a>
+        <p>Mang đến hương vị cà phê nguyên chất từ vùng cao nguyên Việt Nam, với tình yêu và trách nhiệm trong từng tách
+          cà phê.</p>
+        <div class="socials">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          <a href="#" class="social-link" aria-label="Zalo">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Điều Hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="products.html">Sản Phẩm</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="news.html">Tin Tức</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sản Phẩm</h4>
+        <ul>
+          <li><a href="products.html">Espresso</a></li>
+          <li><a href="products.html">Cà Phê Sữa Đá</a></li>
+          <li><a href="products.html">Cold Brew</a></li>
+          <li><a href="products.html">Cappuccino</a></li>
+          <li><a href="products.html">Bạc Xỉu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên Hệ</h4>
+        <ul>
+          <li><a href="tel:0901234567">📞 0901 234 567</a></li>
+          <li><a href="mailto:hello@nguyenchat.vn">✉ hello@nguyenchat.vn</a></li>
+          <li><a href="contact.html">📍 123 Nguyễn Huệ, Q.1</a></li>
+          <li><a href="#">⏰ 7:00 – 22:00 hàng ngày</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nguyên Chất Coffee. Bảo lưu mọi quyền.</p>
+      <p>Thiết kế với ❤️ tại Việt Nam</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Apply saved style on load
+    (function () {
+      const id = parseInt(localStorage.getItem('cafeStyle') || '1');
+      document.getElementById('theme-stylesheet').href = 'assets/css/style' + id + '-' +
+        ['', 'dark-luxury', 'fresh-garden', 'pure-minimal', 'vibrant-modern', 'ocean-depth'][id] + '.css';
+    })();
+  </script>
+</body>
+
+</html>
